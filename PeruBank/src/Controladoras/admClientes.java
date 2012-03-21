@@ -48,11 +48,14 @@ public class admClientes {
     }
     return true;
   }
-  
-  public boolean datos(Cliente cliente){  // Verifica si los campos estan vacios
+  // Verifica si los campos estan vacios
+  public boolean datos(Cliente cliente){
     if (!verificaCodCliente(cliente.getCodCliente())){
       JOptionPane.showMessageDialog(null, "Ingrese Código de Cliente", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
       return false;
+    }
+    if (!verificaDigitosCodCliente(cliente.getCodCliente())){
+      JOptionPane.showMessageDialog(null, "El Código de Cliente debe tener 8 dígitos", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
     }
     if (!verificaRazonSocial(cliente.getRazonSocial())){
       JOptionPane.showMessageDialog(null, "Ingrese Razón Social", "Error - Razón Social", JOptionPane.ERROR_MESSAGE);
@@ -114,7 +117,15 @@ public class admClientes {
   }
   
   public boolean verificaCanEmpleados(int canEmpleados){
-    if (canEmpleados >= 0){
+    if (canEmpleados > 0){
+      return true;
+    }
+    return false;
+  }
+  
+  //Verificar cantidad de dígitos en el código del cliente
+  public boolean verificaDigitosCodCliente(String codCliente){
+    if (codCliente.trim().length() == 8){
       return true;
     }
     return false;
