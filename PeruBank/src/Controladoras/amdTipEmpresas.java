@@ -7,15 +7,15 @@ import Modelos.tipEmpresa;
 public class amdTipEmpresas {
   private ArrayList<tipEmpresa> dbtipEmpresas = new ArrayList<>();
 
-  private boolean verificaTipCliente(String tipEmpresa){
+  private boolean verificaTipEmpresa(String tipEmpresa){
     simulaTipEmpresas();
     for (tipEmpresa TipEmpresa : dbtipEmpresas){
-      if (!TipEmpresa.getTipEmpresa().equals(tipEmpresa)){
-        JOptionPane.showMessageDialog(null, "Tipo de empresa no existe. Verifique !!!", "Error - Tipo de Empresa", JOptionPane.ERROR_MESSAGE);
-        return false;
+      if (TipEmpresa.getTipEmpresa().equals(tipEmpresa)){
+        return true;
       }
     }
-    return true;
+    JOptionPane.showMessageDialog(null, "Tipo de empresa no existe. Verifique !!!", "Error - Tipo de Empresa", JOptionPane.ERROR_MESSAGE);
+    return false;
   }
   
   private void simulaTipEmpresas() {

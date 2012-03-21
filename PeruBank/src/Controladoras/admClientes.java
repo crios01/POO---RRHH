@@ -7,12 +7,26 @@ import Modelos.Cliente;
 public class admClientes {
   
   private ArrayList<Cliente> dbClientes = new ArrayList<>();
-
+  
+  private void simulaClientes() {
+    this.dbClientes.add(new Cliente("001", "Detroit Diesel MTU Perú",         "20100020441", "05/01/2003", "002", 150));
+    this.dbClientes.add(new Cliente("002", "Aceros Boehler del Perú",         "20100036101", "03/02/2004", "005", 250));
+    this.dbClientes.add(new Cliente("003", "Suthern Peru Cooper Corporation", "20100147514", "10/08/2004", "001", 4500));
+    this.dbClientes.add(new Cliente("004", "Xstrata Tintaya",                 "20114915026", "05/02/2005", "005", 3580));
+    this.dbClientes.add(new Cliente("005", "SinoMaq",                         "20517519490", "27/03/2005", "005", 250));
+    this.dbClientes.add(new Cliente("006", "Comercial del Acero",             "20527600031", "13/04/2005", "002", 475));
+    this.dbClientes.add(new Cliente("007", "Constructora Cairo",              "20493066791", "15/04/2005", "002", 150));
+    this.dbClientes.add(new Cliente("008", "Telefónica del Perú",             "20100017491", "23/05/2005", "001", 150));
+  }
+  
   public boolean verificaDatos(Cliente nuevoCliente){
-    if (!datos(nuevoCliente)){
+    if (!datos(nuevoCliente)){ // Verifica si los campos estan vacios
       return false;
     }
-    if (!ClienteExiste(nuevoCliente.getCodCliente(), nuevoCliente.getRuc())){
+    if (!ClienteExiste(nuevoCliente.getCodCliente(), nuevoCliente.getRuc())){ // Verifica si el Cliente ya existe
+      return false;
+    }
+    if (!verificaTipEmpresa(nuevoCliente.getTipEmpresa())){ // Verifica si existe el Tipo de Empresa
       return false;
     }
     return true;
@@ -35,7 +49,7 @@ public class admClientes {
     return true;
   }
   
-  public boolean datos(Cliente cliente){
+  public boolean datos(Cliente cliente){  // Verifica si los campos estan vacios
     if (!verificaCodCliente(cliente.getCodCliente())){
       JOptionPane.showMessageDialog(null, "Ingrese Código de Cliente", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
       return false;
@@ -63,6 +77,7 @@ public class admClientes {
     return true;
   }
   
+  // Verificar si estan vacios
   public boolean verificaCodCliente(String codCliente){
     if (codCliente != null) {
       return true;
@@ -103,17 +118,6 @@ public class admClientes {
       return true;
     }
     return false;
-  }
-  
-  private void simulaClientes() {
-    this.dbClientes.add(new Cliente("001", "Detroit Diesel MTU Perú",         "20100020441", "05/01/2003", "002", 150));
-    this.dbClientes.add(new Cliente("002", "Aceros Boehler del Perú",         "20100036101", "03/02/2004", "005", 250));
-    this.dbClientes.add(new Cliente("003", "Suthern Peru Cooper Corporation", "20100147514", "10/08/2004", "001", 4500));
-    this.dbClientes.add(new Cliente("004", "Xstrata Tintaya",                 "20114915026", "05/02/2005", "005", 3580));
-    this.dbClientes.add(new Cliente("005", "SinoMaq",                         "20517519490", "27/03/2005", "005", 250));
-    this.dbClientes.add(new Cliente("006", "Comercial del Acero",             "20527600031", "13/04/2005", "002", 475));
-    this.dbClientes.add(new Cliente("007", "Constructora Cairo",              "20493066791", "15/04/2005", "002", 150));
-    this.dbClientes.add(new Cliente("008", "Telefónica del Perú",             "20100017491", "23/05/2005", "001", 150));
   }
   
 }

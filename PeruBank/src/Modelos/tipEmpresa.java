@@ -1,7 +1,7 @@
 package Modelos;
 
 public class tipEmpresa {
-  private String TipEmpresa;
+  private String TipEmpresa; // Código
   private String descripcion;
   private String abraviatura;
 
