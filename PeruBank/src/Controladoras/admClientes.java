@@ -43,9 +43,6 @@ public class admClientes {
       JOptionPane.showMessageDialog(null, "Ingrese Código de Cliente", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
       return false;
     }
-    if (!verificaDigitosCodCliente(cliente.getCodCliente())){
-      JOptionPane.showMessageDialog(null, "El Código de Cliente debe tener 8 dígitos", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
-    }
     if (!verificaRazonSocial(cliente.getRazonSocial())){
       JOptionPane.showMessageDialog(null, "Ingrese Razón Social", "Error - Razón Social", JOptionPane.ERROR_MESSAGE);
       return false;
@@ -66,8 +63,26 @@ public class admClientes {
       JOptionPane.showMessageDialog(null, "Ingrese la Cantidad de Empleados", "Error - Cantidad de Empleados", JOptionPane.ERROR_MESSAGE);
       return false;
     }
+    if (!verificaCanDigitosCodCliente(cliente.getCodCliente())){
+      JOptionPane.showMessageDialog(null, "El Código de Cliente debe tener 8 dígitos", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
+      return false;
+    }
+    if (!verificaCanDigitosRucCliente(cliente.getRuc())){
+      JOptionPane.showMessageDialog(null, "El RUC de Cliente debe tener 11 dígitos", "Error - RUC de Cliente", JOptionPane.ERROR_MESSAGE);
+      return false;
+    }
+    if (!verificaDigitosRuc(cliente.getRuc())){
+      JOptionPane.showMessageDialog(null, "El RUC de Cliente solo debe contener dígitos", "Error - RUC de Cliente", JOptionPane.ERROR_MESSAGE);
+      return false;
+    }
+    if (!verificaDigitoInicialRuc(cliente.getRuc())){
+      JOptionPane.showMessageDialog(null, "El RUC de Cliente debe comenzar con 1 ó 2", "Error - RUC de Cliente", JOptionPane.ERROR_MESSAGE);
+      return false;
+    }
     return true;
   }
+  // Verificaciones Unitarias //
+  // ======================== //
   // Verifica si Campo existe
   public boolean verificaExisteCodCliente(String codCliente){
     simulaClientes();
@@ -125,22 +140,31 @@ public class admClientes {
     return false;
   }
   //Verificar cantidad de dígitos en el código y el ruc del cliente
-  public boolean verificaDigitosCodCliente(String codCliente){
-    if (codCliente.trim().length() == 8){
-      return true;
+  public boolean verificaCanDigitosCodCliente(String codCliente){
+    if (codCliente.trim().length() != 8){
+      return false;
     }
-    return false;
+    return true;
   }
-  public boolean verificaDigitosRucCliente(String ruc){
-    if(ruc.trim().length() == 11){
-      return true;
+  public boolean verificaCanDigitosRucCliente(String ruc){
+    if(ruc.trim().length() != 11){
+      return false;
     }
-    return false;
+    return true;
+  }
+  public boolean verificaDigitosRuc(String ruc){
+    String numeros = "0123456789";
+    for (int i = 0; i < ruc.length(); i++){
+      if(numeros.indexOf(ruc.charAt(i),0) == -1){
+       return false;
+      }
+    }
+    return true;
   }
   public boolean verificaDigitoInicialRuc(String ruc){
-    if(ruc.substring(0, 1) == "1" || ruc.substring(0, 1) == "2"){
-      return true;
+    if(!ruc.substring(0, 1).equals("1") && !ruc.substring(0, 1).equals("2")){
+      return false;
     }
-    return false;
+    return true;
   }
 }
