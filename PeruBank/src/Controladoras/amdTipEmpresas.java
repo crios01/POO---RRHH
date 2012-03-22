@@ -14,7 +14,6 @@ public class amdTipEmpresas {
         return true;
       }
     }
-    JOptionPane.showMessageDialog(null, "Tipo de empresa no existe. Verifique !!!", "Error - Tipo de Empresa", JOptionPane.ERROR_MESSAGE);
     return false;
   }
   

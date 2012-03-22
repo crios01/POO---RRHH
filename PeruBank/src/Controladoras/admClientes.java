@@ -18,38 +18,27 @@ public class admClientes {
     this.dbClientes.add(new Cliente("007", "Constructora Cairo",              "20493066791", "15/04/2005", "002", 150));
     this.dbClientes.add(new Cliente("008", "Telefónica del Perú",             "20100017491", "23/05/2005", "001", 150));
   }
-  
+  // Verificación general de los Datos
   public boolean verificaDatos(Cliente nuevoCliente){
-    if (!datos(nuevoCliente)){ // Verifica si los campos estan vacios
+    if (!consistenciaDatos(nuevoCliente)){ // Verifica si los campos estan vacios
       return false;
     }
-    if (!ClienteExiste(nuevoCliente.getCodCliente(), nuevoCliente.getRuc())){ // Verifica si el Cliente ya existe
+    if (!verificaExisteCodCliente(nuevoCliente.getCodCliente())){ // Verifica si el Código del Cliente ya existe
+      JOptionPane.showMessageDialog(null, "Código de Cliente ya existe. Verifique !!!", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
+      return false;
+    }
+    if (!verificaExisteRuc(nuevoCliente.getRuc())){ // Verifica si el RUC del Cliente ya existe
+      JOptionPane.showMessageDialog(null, "Número de RUC ya existe. Verifique !!!", "Error - RUC", JOptionPane.ERROR_MESSAGE);
       return false;
     }
     if (!verificaTipEmpresa(nuevoCliente.getTipEmpresa())){ // Verifica si existe el Tipo de Empresa
+      JOptionPane.showMessageDialog(null, "Tipo de empresa no existe. Verifique !!!", "Error - Tipo de Empresa", JOptionPane.ERROR_MESSAGE);
       return false;
     }
     return true;
   }
-  
-  public boolean ClienteExiste(String codCliente, String ruc){
-    simulaClientes();
-    for (Cliente cliente : dbClientes){
-      if (cliente.getCodCliente().equals(codCliente)){
-        JOptionPane.showMessageDialog(null, "Código de Cliente ya existe. Verifique !!!", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
-        return false;
-      }
-    }
-    for (Cliente cliente : dbClientes){
-      if (cliente.getRuc().equals(ruc)){
-        JOptionPane.showMessageDialog(null, "Número de RUC ya existe. Verifique !!!", "Error - RUC", JOptionPane.ERROR_MESSAGE);
-        return false;
-      }
-    }
-    return true;
-  }
-  // Verifica si los campos estan vacios
-  public boolean datos(Cliente cliente){
+  // Verifica la consistencia de Datos
+  public boolean consistenciaDatos(Cliente cliente){
     if (!verificaCodCliente(cliente.getCodCliente())){
       JOptionPane.showMessageDialog(null, "Ingrese Código de Cliente", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
       return false;
@@ -79,56 +68,79 @@ public class admClientes {
     }
     return true;
   }
-  
-  // Verificar si estan vacios
+  // Verifica si Campo existe
+  public boolean verificaExisteCodCliente(String codCliente){
+    simulaClientes();
+    for (Cliente cliente : dbClientes){
+      if (cliente.getCodCliente().equals(codCliente)){
+        return true;
+      }
+    }
+    return false;
+  }
+  public boolean verificaExisteRuc(String ruc){
+    simulaClientes();
+    for (Cliente cliente : dbClientes){
+      if (cliente.getRuc().equals(ruc)){
+        return true;
+      }
+    }
+    return false;
+  }
+  // Verificar unitaria para saber si estan vacios los campos
   public boolean verificaCodCliente(String codCliente){
     if (codCliente != null) {
       return true;
     }
     return false;
   }
-  
   public boolean verificaRazonSocial(String razonSocial){
     if (razonSocial != null){
       return true;
     }
     return false;
   }
-  
   public boolean verificaRuc(String ruc){
     if (ruc != null){
       return true;
     }
     return false;
   }
-  
   public boolean verificaFechaInicio(String fechaInicio){
     if (fechaInicio != null){
       return true;
     }
     return false;
   }
-  
   public boolean verificaTipEmpresa(String tipEmpresa){
     if (tipEmpresa != null){
       return true;
     }
     return false;
   }
-  
   public boolean verificaCanEmpleados(int canEmpleados){
     if (canEmpleados > 0){
       return true;
     }
     return false;
   }
-  
-  //Verificar cantidad de dígitos en el código del cliente
+  //Verificar cantidad de dígitos en el código y el ruc del cliente
   public boolean verificaDigitosCodCliente(String codCliente){
     if (codCliente.trim().length() == 8){
       return true;
     }
     return false;
   }
-  
+  public boolean verificaDigitosRucCliente(String ruc){
+    if(ruc.trim().length() == 11){
+      return true;
+    }
+    return false;
+  }
+  public boolean verificaDigitoInicialRuc(String ruc){
+    if(ruc.substring(0, 1) == "1" || ruc.substring(0, 1) == "2"){
+      return true;
+    }
+    return false;
+  }
 }
