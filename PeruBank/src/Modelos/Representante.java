@@ -1,7 +1,8 @@
 package Modelos;
 
 public class Representante {
-  private String tipDocu;
+  private String codCliente;
+  private String tipDocumento;
   private String numDocumento;
   private String nombres;
   private String apellidos;
@@ -9,8 +10,9 @@ public class Representante {
   private String gruBastanteo;
 
   // Constructor //
-  public Representante(String tipDocu, String numDocumento, String nombres, String apellidos, String codCargo, String gruBastanteo) {
-    this.tipDocu = tipDocu;
+  public Representante(String codCliente, String tipDocumento, String numDocumento, String nombres, String apellidos, String codCargo, String gruBastanteo) {
+    this.codCliente = codCliente;
+    this.tipDocumento = tipDocumento;
     this.numDocumento = numDocumento;
     this.nombres = nombres;
     this.apellidos = apellidos;
@@ -19,11 +21,18 @@ public class Representante {
   }
 
   // Getter & Setter //
-  public String getTipDocu() {
-    return tipDocu;
+  public String getCodCliente() {
+    return codCliente;
   }
-  public void setTipDocu(String tipDocu) {
-    this.tipDocu = tipDocu;
+  public void setCodCliente(String codCliente) {
+    this.codCliente = codCliente;
+  }
+
+  public String getTipDocumento() {
+    return tipDocumento;
+  }
+  public void setTipDocumento(String tipDocu) {
+    this.tipDocumento = tipDocumento;
   }
   
   public String getNumDocumento() {

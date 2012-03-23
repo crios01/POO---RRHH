@@ -18,7 +18,7 @@ public class admClientes {
     this.dbClientes.add(new Cliente("007", "Constructora Cairo",              "20493066791", "15/04/2005", "002", 150));
     this.dbClientes.add(new Cliente("008", "Telefónica del Perú",             "20100017491", "23/05/2005", "001", 150));
   }
-  // Verificación general de los Datos
+  // Verificación general de los Datos //
   public boolean verificaDatos(Cliente nuevoCliente){
     if (!consistenciaDatos(nuevoCliente)){ // Verifica si los campos estan vacios
       return false;
@@ -37,22 +37,22 @@ public class admClientes {
     }
     return true;
   }
-  // Verifica la consistencia de Datos
+  // Verifica la consistencia de Datos //
   public boolean consistenciaDatos(Cliente cliente){
     if (!verificaCodCliente(cliente.getCodCliente())){
-      JOptionPane.showMessageDialog(null, "Ingrese Código de Cliente", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(null, "Ingrese el Código de Cliente", "Error - Código de Cliente", JOptionPane.ERROR_MESSAGE);
       return false;
     }
     if (!verificaRazonSocial(cliente.getRazonSocial())){
-      JOptionPane.showMessageDialog(null, "Ingrese Razón Social", "Error - Razón Social", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(null, "Ingrese la Razón Social", "Error - Razón Social", JOptionPane.ERROR_MESSAGE);
       return false;
     }
     if (!verificaRuc(cliente.getRuc())){
-      JOptionPane.showMessageDialog(null, "Ingrese RUC", "Error - RUC", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(null, "Ingrese el RUC", "Error - RUC", JOptionPane.ERROR_MESSAGE);
       return false;
     }
     if (!verificaFechaInicio(cliente.getFechaInicio())){
-      JOptionPane.showMessageDialog(null, "Ingrese Fecha de Inicio de Operaciones", "Error - Fecha Inicio", JOptionPane.ERROR_MESSAGE);
+      JOptionPane.showMessageDialog(null, "Ingrese la Fecha de Inicio de Operaciones", "Error - Fecha Inicio", JOptionPane.ERROR_MESSAGE);
       return false;
     }
     if (!verificaTipEmpresa(cliente.getTipEmpresa())){
