@@ -32,4 +32,5 @@ public class tipEmpresa {
   public void setAbraviatura(String abraviatura) {
     this.abraviatura = abraviatura;
   }
+
 }

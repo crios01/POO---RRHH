@@ -7,7 +7,7 @@ public class Cliente {
   private String fechaInicio;
   private String tipEmpresa;
   private int canEmpleados;
-  // Constructor
+  // Constructor //
   public Cliente(String codCliente, String razonSocial, String ruc, String fechaInicio, String tipEmpresa, int canEmpleados) {
     this.codCliente = codCliente;
     this.razonSocial = razonSocial;
@@ -16,7 +16,7 @@ public class Cliente {
     this.tipEmpresa = tipEmpresa;
     this.canEmpleados = canEmpleados;
   }
-  // Getter & Setter
+  // Getter & Setter //
   public String getCodCliente() {
     return codCliente;
   }
