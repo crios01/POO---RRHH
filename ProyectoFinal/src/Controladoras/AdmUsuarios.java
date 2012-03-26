@@ -42,5 +42,4 @@ public class AdmUsuarios {
     }
     return false;
   }
-  
 }
