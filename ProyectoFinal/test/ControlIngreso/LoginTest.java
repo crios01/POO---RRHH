@@ -54,5 +54,4 @@ public class LoginTest {
 
     System.out.println("3. Debe ingresar usuario y contraseña.");
   }
-
 }

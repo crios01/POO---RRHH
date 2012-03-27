@@ -6,7 +6,10 @@ public class Usuario extends Auditoria implements IMantenimiento {
 
   private int usuario_id;
   private Rol rol;
-  private String usuario, clave, dni, nombre;
+  private String usuario;
+  private String clave;
+  private String dni;
+  private String nombre;
   private Empleado empleado;
 
   public Usuario(int usuario_id, Rol rol, String usuario, String clave, Empleado empleado) {
@@ -20,26 +23,31 @@ public class Usuario extends Auditoria implements IMantenimiento {
   }
 
   public Usuario(String dni, String nombre, String clave) {
-    // TODO Auto-generated constructor stub
-  }
-
-  public String getDni() {
-    return dni;
-  }
-  public void setDni(String dni) {
     this.dni = dni;
+    this.nombre = nombre;
+    this.clave = clave;
   }
 
   public String getNombre() {
     return nombre;
   }
+
   public void setNombre(String nombre) {
     this.nombre = nombre;
+  }
+
+  public String getDni() {
+    return dni;
+  }
+
+  public void setDni(String dni) {
+    this.dni = dni;
   }
 
   public int getUsuario_id() {
     return usuario_id;
   }
+
   public void setUsuario_id(int usuario_id) {
     this.usuario_id = usuario_id;
   }
@@ -47,6 +55,7 @@ public class Usuario extends Auditoria implements IMantenimiento {
   public Rol getRol() {
     return rol;
   }
+
   public void setRol(Rol rol) {
     this.rol = rol;
   }
@@ -54,6 +63,7 @@ public class Usuario extends Auditoria implements IMantenimiento {
   public String getUsuario() {
     return usuario;
   }
+
   public void setUsuario(String usuario) {
     this.usuario = usuario;
   }
@@ -61,6 +71,7 @@ public class Usuario extends Auditoria implements IMantenimiento {
   public String getClave() {
     return clave;
   }
+
   public void setClave(String clave) {
     this.clave = clave;
   }
@@ -68,6 +79,7 @@ public class Usuario extends Auditoria implements IMantenimiento {
   public Empleado getEmpleado() {
     return empleado;
   }
+
   public void setEmpleado(Empleado empleado) {
     this.empleado = empleado;
   }

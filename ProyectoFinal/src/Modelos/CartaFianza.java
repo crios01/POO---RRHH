@@ -13,6 +13,7 @@ public class CartaFianza extends Tarea {
   public Proveedor getProveedor() {
     return proveedor;
   }
+
   public void setProveedor(Proveedor proveedor) {
     this.proveedor = proveedor;
   }
@@ -20,6 +21,7 @@ public class CartaFianza extends Tarea {
   public String getNumeroCarta() {
     return numeroCarta;
   }
+
   public void setNumeroCarta(String numeroCarta) {
     this.numeroCarta = numeroCarta;
   }
@@ -27,6 +29,7 @@ public class CartaFianza extends Tarea {
   public String getNumeroContrato() {
     return numeroContrato;
   }
+
   public void setNumeroContrato(String numeroContrato) {
     this.numeroContrato = numeroContrato;
   }
@@ -34,6 +37,7 @@ public class CartaFianza extends Tarea {
   public String getBancoEmisor() {
     return bancoEmisor;
   }
+
   public void setBancoEmisor(String bancoEmisor) {
     this.bancoEmisor = bancoEmisor;
   }
@@ -41,6 +45,7 @@ public class CartaFianza extends Tarea {
   public String getTipo() {
     return tipo;
   }
+
   public void setTipo(String tipo) {
     this.tipo = tipo;
   }
@@ -48,6 +53,7 @@ public class CartaFianza extends Tarea {
   public String getNumeroProceso() {
     return numeroProceso;
   }
+
   public void setNumeroProceso(String numeroProceso) {
     this.numeroProceso = numeroProceso;
   }
@@ -55,8 +61,8 @@ public class CartaFianza extends Tarea {
   public double getImporte() {
     return importe;
   }
+
   public void setImporte(double importe) {
     this.importe = importe;
   }
-
 }

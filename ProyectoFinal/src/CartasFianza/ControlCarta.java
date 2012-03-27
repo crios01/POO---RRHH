@@ -14,11 +14,13 @@ public class ControlCarta {
     this.cartafianza = cartafianza;
     this.proveedor = proveedor;
     this.tarea = tarea;
+
   }
 
   public void settarea(String tarea) {
     this.tarea = tarea;
   }
+
   public Object gettarea() {
     return tarea;
   }
@@ -26,6 +28,7 @@ public class ControlCarta {
   public void setcartafianza(String cartafianza) {
     this.cartafianza = cartafianza;
   }
+
   public Object getcartafianza() {
     return cartafianza;
   }
@@ -33,6 +36,7 @@ public class ControlCarta {
   public void setproveedor(String proveedor) {
     this.proveedor = proveedor;
   }
+
   public Object getproveedor() {
     return proveedor;
   }
@@ -40,8 +44,8 @@ public class ControlCarta {
   public List<Object> getList() {
     return list;
   }
+
   public void setList(List<Object> list) {
     this.list = list;
   }
-
 }

@@ -1,7 +1,7 @@
 package Seguridad;
 
 import org.junit.Test;
-import Modelos.Usuario;
+//import Modelos.Usuario; // Quitado por estar demás //
 import static org.junit.Assert.*;
 
 public class UsuarioTest {
@@ -11,8 +11,6 @@ public class UsuarioTest {
 
   @Test
   public void usuarioDebeCrearseConDniNombreyClave() {
-
-    System.out.println("Usuario debe crearse con DNI, Nombre y Clave");
 
     // Arrange
     // Preparar los datos de prueba
@@ -29,7 +27,6 @@ public class UsuarioTest {
     assertEquals(dni, usuario.getDni());
     assertEquals(nombre, usuario.getNombre());
     assertEquals(clave, usuario.getClave());
-
+    System.out.println("Usuario debe crearse con DNI, Nombre y Clave");
   }
-
 }

@@ -34,6 +34,5 @@ public class ListasCartasFianza {
   public void setListaCartaFianza(List<CartaFianza> listaCartaFianza) {
     this.listaCartaFianza = listaCartaFianza;
   }
-  //Fin constructor de listas carta fianza   
-
+  //Fin constructor de listas carta fianza
 }

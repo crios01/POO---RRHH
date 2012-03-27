@@ -8,6 +8,7 @@ public class Proveedor {
   public int getProveedor_id() {
     return proveedor_id;
   }
+
   public void setProveedor_id(int proveedor_id) {
     this.proveedor_id = proveedor_id;
   }
@@ -15,8 +16,8 @@ public class Proveedor {
   public String getNombre() {
     return nombre;
   }
+
   public void setNombre(String nombre) {
     this.nombre = nombre;
   }
-
 }

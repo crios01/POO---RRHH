@@ -1,8 +1,8 @@
 package Seguridad;
 
 import org.junit.Test;
+//import Modelos.Usuario; // Quitado por ocacionar error.
 import static org.junit.Assert.*;
-import Modelos.Usuario;
 
 public class AdmUsuarioTest {
 
@@ -62,5 +62,4 @@ public class AdmUsuarioTest {
     Usuario usuario = adm.buscarUsuario(dni);
     assertNull(usuario);
   }
-
 }

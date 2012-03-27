@@ -1,8 +1,7 @@
 package TareasGenerales;
 
-import Modelos.Tarea;
-import Modelos.Usuario;
 import java.util.ArrayList;
+import Modelos.Usuario;
 
 public class AdmTareasGenerales {
 
@@ -73,5 +72,4 @@ public class AdmTareasGenerales {
       usuarios.remove(usuario);
     }
   }
-
 }

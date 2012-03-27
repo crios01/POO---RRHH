@@ -8,6 +8,7 @@ public class UsuarioNotificado {
   public Tarea getTarea() {
     return tarea;
   }
+
   public void setTarea(Tarea tarea) {
     this.tarea = tarea;
   }
@@ -15,8 +16,14 @@ public class UsuarioNotificado {
   public Usuario getUsuario() {
     return usuario;
   }
+
   public void setUsuario(Usuario usuario) {
     this.usuario = usuario;
   }
 
+  public UsuarioNotificado(Tarea tarea, Usuario usuario) {
+    super();
+    this.tarea = tarea;
+    this.usuario = usuario;
+  }
 }

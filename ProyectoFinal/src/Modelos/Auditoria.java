@@ -14,6 +14,7 @@ public class Auditoria {
   public Date getFechaCreacion() {
     return fechaCreacion;
   }
+
   public void setFechaCreacion(Date fechaCreacion) {
     this.fechaCreacion = fechaCreacion;
   }
@@ -21,6 +22,7 @@ public class Auditoria {
   public Date getUsuarioCreacion() {
     return UsuarioCreacion;
   }
+
   public void setUsuarioCreacion(Date usuarioCreacion) {
     UsuarioCreacion = usuarioCreacion;
   }
@@ -28,6 +30,7 @@ public class Auditoria {
   public String getIpCreacion() {
     return ipCreacion;
   }
+
   public void setIpCreacion(String ipCreacion) {
     this.ipCreacion = ipCreacion;
   }
@@ -35,6 +38,7 @@ public class Auditoria {
   public Date getFechaModificacion() {
     return fechaModificacion;
   }
+
   public void setFechaModificacion(Date fechaModificacion) {
     this.fechaModificacion = fechaModificacion;
   }
@@ -42,6 +46,7 @@ public class Auditoria {
   public Date getUsuarioModificacion() {
     return UsuarioModificacion;
   }
+
   public void setUsuarioModificacion(Date usuarioModificacion) {
     UsuarioModificacion = usuarioModificacion;
   }
@@ -49,8 +54,8 @@ public class Auditoria {
   public String getIpModificacion() {
     return ipModificacion;
   }
+
   public void setIpModificacion(String ipModificacion) {
     this.ipModificacion = ipModificacion;
   }
-
 }

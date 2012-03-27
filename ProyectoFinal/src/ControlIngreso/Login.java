@@ -30,5 +30,4 @@ public class Login {
   public void setListaUsuario(List<Usuario> listaUsuario) {
     this.listaUsuario = listaUsuario;
   }
-
 }

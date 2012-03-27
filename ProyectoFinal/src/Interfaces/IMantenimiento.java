@@ -9,5 +9,4 @@ public interface IMantenimiento {
   public boolean editar();
 
   public boolean eliminar();
-
 }

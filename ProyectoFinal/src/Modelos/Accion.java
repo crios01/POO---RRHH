@@ -9,6 +9,7 @@ public class Accion {
   public int getAccion_id() {
     return accion_id;
   }
+
   public void setAccion_id(int accion_id) {
     this.accion_id = accion_id;
   }
@@ -16,6 +17,7 @@ public class Accion {
   public String getNombre() {
     return nombre;
   }
+
   public void setNombre(String nombre) {
     this.nombre = nombre;
   }
@@ -23,8 +25,8 @@ public class Accion {
   public String getDescripcion() {
     return descripcion;
   }
+
   public void setDescripcion(String descripcion) {
     this.descripcion = descripcion;
   }
-
 }

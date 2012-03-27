@@ -9,6 +9,7 @@ public class PermisoAcciones {
   public Rol getRol() {
     return rol;
   }
+
   public void setRol(Rol rol) {
     this.rol = rol;
   }
@@ -16,6 +17,7 @@ public class PermisoAcciones {
   public Modulo getModulo() {
     return modulo;
   }
+
   public void setModulo(Modulo modulo) {
     this.modulo = modulo;
   }
@@ -23,8 +25,8 @@ public class PermisoAcciones {
   public Accion getAccion() {
     return accion;
   }
+
   public void setAccion(Accion accion) {
     this.accion = accion;
   }
-
 }

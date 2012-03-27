@@ -11,6 +11,7 @@ public class Rol extends Auditoria implements IMantenimiento {
   public int getRol_id() {
     return rol_id;
   }
+
   public void setRol_id(int rol_id) {
     this.rol_id = rol_id;
   }
@@ -18,6 +19,7 @@ public class Rol extends Auditoria implements IMantenimiento {
   public String getNombre() {
     return nombre;
   }
+
   public void setNombre(String nombre) {
     this.nombre = nombre;
   }
@@ -25,6 +27,7 @@ public class Rol extends Auditoria implements IMantenimiento {
   public String getDescripcion() {
     return descripcion;
   }
+
   public void setDescripcion(String descripcion) {
     this.descripcion = descripcion;
   }
@@ -33,20 +36,22 @@ public class Rol extends Auditoria implements IMantenimiento {
   public void buscar() {
     // TODO Auto-generated method stub
   }
+
   @Override
   public boolean adicionar() {
     // TODO Auto-generated method stub
     return false;
   }
+
   @Override
   public boolean editar() {
     // TODO Auto-generated method stub
     return false;
   }
+
   @Override
   public boolean eliminar() {
     // TODO Auto-generated method stub
     return false;
   }
-
 }

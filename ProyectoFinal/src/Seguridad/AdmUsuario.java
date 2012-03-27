@@ -1,7 +1,6 @@
 package Seguridad;
 
 import java.util.ArrayList;
-import Modelos.Usuario;
 
 public class AdmUsuario {
 
@@ -14,7 +13,6 @@ public class AdmUsuario {
 
   public void registrarUsuario(String dni, String nombre, String clave) {
     if (noExisteDni(dni)) {
-
       Usuario nuevoUsuario = new Usuario(dni, nombre, clave);
       usuarios.add(nuevoUsuario);
     }
@@ -43,5 +41,4 @@ public class AdmUsuario {
       usuarios.remove(usuario);
     }
   }
-
 }

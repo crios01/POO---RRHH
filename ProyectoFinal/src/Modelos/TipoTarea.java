@@ -8,6 +8,7 @@ public class TipoTarea {
   public String getTipotarea_id() {
     return tipotarea_id;
   }
+
   public void setTipotarea_id(String tipotarea_id) {
     this.tipotarea_id = tipotarea_id;
   }
@@ -15,9 +16,11 @@ public class TipoTarea {
   public String getDescripcion() {
     return descripcion;
   }
+
   public void setDescripcion(String descripcion) {
     this.descripcion = descripcion;
   }
+  
   private boolean notificacion = false;
 
   public boolean isNotificacion() {
@@ -27,6 +30,7 @@ public class TipoTarea {
   public void setNotificacion(boolean notificacion) {
     this.notificacion = notificacion;
   }
+  
   private boolean recordatorio = false;
 
   public boolean isRecordatorio() {
@@ -36,6 +40,7 @@ public class TipoTarea {
   public void setRecordatorio(boolean recordatorio) {
     this.recordatorio = recordatorio;
   }
+  
   /**
    * Define la frecuencia (en horas) con la que se va a enviar las notificaciones y recordatorios
    * @uml.property name="frecuenciaHoras"
@@ -49,5 +54,4 @@ public class TipoTarea {
   public void setFrecuenciaHoras(int frecuenciaHoras) {
     this.frecuenciaHoras = frecuenciaHoras;
   }
-
 }

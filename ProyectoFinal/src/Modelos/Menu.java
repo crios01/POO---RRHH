@@ -9,6 +9,7 @@ public class Menu {
   public int getMenu_id() {
     return menu_id;
   }
+
   public void setMenu_id(int menu_id) {
     this.menu_id = menu_id;
   }
@@ -16,6 +17,7 @@ public class Menu {
   public String getNombre() {
     return nombre;
   }
+
   public void setNombre(String nombre) {
     this.nombre = nombre;
   }
@@ -23,8 +25,8 @@ public class Menu {
   public Modulo getModulo() {
     return modulo;
   }
+
   public void setModulo(Modulo modulo) {
     this.modulo = modulo;
   }
-
 }
