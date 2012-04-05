@@ -2,6 +2,7 @@ package Modelos;
 
 public class Accion {
 
+  // Clase Accion //
   private int accion_id;
   private String nombre;
   private String descripcion;
