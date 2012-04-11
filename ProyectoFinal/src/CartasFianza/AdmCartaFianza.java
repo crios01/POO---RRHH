@@ -5,16 +5,19 @@ import java.util.List;
 
 public class AdmCartaFianza {
 
-  // Atributo //
+  // Atributo
   List<CartaFianza> listaCartaFianza;
 
-  // Constructor no devuelve nada y tampoco se le pone "void" //
+  // Constructor no devuelve nada y tampoco se le pone "void"
   public AdmCartaFianza(List<CartaFianza> listaCartaFianza) {
     this.listaCartaFianza = listaCartaFianza;
 
   }
 
-  // Buscador para dos parametros //
+//      public void registraCartaFianza(CartaFianza cartafianza,
+  //              List<Usuario> listaNotificacion) {
+  //}
+  //Buscador para dos parametros
   public List<CartaFianza> buscarCartaFianza(String codCartaFianza, String strProveedor) {
     List<CartaFianza> listaResultado = new ArrayList<CartaFianza>();
 

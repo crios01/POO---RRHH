@@ -5,6 +5,7 @@ import java.util.List;
 
 public class ControlCarta {
 
+  // Atributos //
   private List<Object> list = new ArrayList<Object>();
   private String cartafianza;
   private String proveedor;

@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class CartaFianza {
 
-  //Lista de atributos
+  // Lista de atributos //
   int idCartaFianza;
   String codCartaFianza;
   String codContrato;
