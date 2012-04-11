@@ -2,6 +2,7 @@ package Modelos;
 
 public class PermisoAcciones {
 
+  // Atributos //
   private Rol rol;
   private Modulo modulo;
   private Accion accion;

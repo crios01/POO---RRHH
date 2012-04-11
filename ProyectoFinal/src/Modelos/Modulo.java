@@ -4,6 +4,7 @@ import Interfaces.IMantenimiento;
 
 public class Modulo extends Auditoria implements IMantenimiento {
 
+  // Atributos //
   private int modulo_id;
   private String nombre;
   private String descripcion;

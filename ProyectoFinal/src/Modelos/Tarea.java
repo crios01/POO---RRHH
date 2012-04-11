@@ -5,117 +5,118 @@ import java.util.Date;
 
 public class Tarea extends Auditoria implements IMantenimiento {
 
+  // Atributos //
   private int tarea_id;
-        private Usuario usuario;
-        private Empleado empleado;
-        private TipoTarea tipoTarea;
-        private Empleado empleadoResponsable;
-        private Date fechaVencimiento;
-        private String comentario;
-        private Date fechaTermino;              
-        private String estado;
-        
-        public int getTarea_id() {
-                return tarea_id;
-        }
+  private Usuario usuario;
+  private Empleado empleado;
+  private TipoTarea tipoTarea;
+  private Empleado empleadoResponsable;
+  private Date fechaVencimiento;
+  private String comentario;
+  private Date fechaTermino;
+  private String estado;
 
-        public void setTarea_id(int tarea_id) {
-                this.tarea_id = tarea_id;
-        }       
+  public int getTarea_id() {
+    return tarea_id;
+  }
 
-        public Usuario getUsuario() {
-                return usuario;
-        }
+  public void setTarea_id(int tarea_id) {
+    this.tarea_id = tarea_id;
+  }
 
-        public void setUsuario(Usuario usuario) {
-                this.usuario = usuario;
-        }       
+  public Usuario getUsuario() {
+    return usuario;
+  }
 
-        public Empleado getEmpleado() {
-                return empleado;
-        }
+  public void setUsuario(Usuario usuario) {
+    this.usuario = usuario;
+  }
 
-        public void setEmpleado(Empleado empleado) {
-                this.empleado = empleado;
-        }       
+  public Empleado getEmpleado() {
+    return empleado;
+  }
 
-        public TipoTarea getTipoTarea() {
-                return tipoTarea;
-        }
+  public void setEmpleado(Empleado empleado) {
+    this.empleado = empleado;
+  }
 
-        public void setTipoTarea(TipoTarea tipoTarea) {
-                this.tipoTarea = tipoTarea;
-        }       
+  public TipoTarea getTipoTarea() {
+    return tipoTarea;
+  }
 
-        public Empleado getEmpleadoResponsable() {
-                return empleadoResponsable;
-        }
+  public void setTipoTarea(TipoTarea tipoTarea) {
+    this.tipoTarea = tipoTarea;
+  }
 
-        public void setEmpleadoResponsable(Empleado empleadoResponsable) {
-                this.empleadoResponsable = empleadoResponsable;
-        }       
+  public Empleado getEmpleadoResponsable() {
+    return empleadoResponsable;
+  }
 
-        public Date getFechaVencimiento() {
-                return fechaVencimiento;
-        }
+  public void setEmpleadoResponsable(Empleado empleadoResponsable) {
+    this.empleadoResponsable = empleadoResponsable;
+  }
 
-        public void setFechaVencimiento(Date fechaVencimiento) {
-                this.fechaVencimiento = fechaVencimiento;
-        }
+  public Date getFechaVencimiento() {
+    return fechaVencimiento;
+  }
 
-        public String getComentario() {
-                return comentario;
-        }
+  public void setFechaVencimiento(Date fechaVencimiento) {
+    this.fechaVencimiento = fechaVencimiento;
+  }
 
-        public void setComentario(String comentario) {
-                this.comentario = comentario;
-        }
+  public String getComentario() {
+    return comentario;
+  }
 
-        public Date getFechaTermino() {
-                return fechaTermino;
-        }
+  public void setComentario(String comentario) {
+    this.comentario = comentario;
+  }
 
-        public void setFechaTermino(Date fechaTermino) {
-                this.fechaTermino = fechaTermino;
-        }
-        
-        public String getEstado() {
-                return estado;
-        }
+  public Date getFechaTermino() {
+    return fechaTermino;
+  }
 
-        public void setEstado(String estado) {
-                this.estado = estado;
-        }
-        
-        @Override
-        public void buscar() {
-                // TODO Auto-generated method stub
-        }
+  public void setFechaTermino(Date fechaTermino) {
+    this.fechaTermino = fechaTermino;
+  }
 
-        @Override
-        public boolean adicionar() {
-                // TODO Auto-generated method stub
-                return false;
-        }
+  public String getEstado() {
+    return estado;
+  }
 
-        @Override
-        public boolean editar() {
-                // TODO Auto-generated method stub
-                return false;
-        }
+  public void setEstado(String estado) {
+    this.estado = estado;
+  }
 
-        @Override
-        public boolean eliminar() {
-                // TODO Auto-generated method stub
-                return false;
-        }
+  @Override
+  public void buscar() {
+    // TODO Auto-generated method stub
+  }
 
-        public boolean asignarTarea() {
-                // TODO Auto-generated method stub
-                return false;
-        }
+  @Override
+  public boolean adicionar() {
+    // TODO Auto-generated method stub
+    return false;
+  }
 
-        public boolean actualizarEstado(String estado_id) {
-                return false;
-        }
+  @Override
+  public boolean editar() {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  @Override
+  public boolean eliminar() {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  public boolean asignarTarea() {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
+  public boolean actualizarEstado(String estado_id) {
+    return false;
+  }
 }
