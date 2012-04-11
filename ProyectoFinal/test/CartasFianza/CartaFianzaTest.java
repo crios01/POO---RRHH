@@ -38,7 +38,6 @@ public class CartaFianzaTest {
     int expResult = 0;
     int filaResultado = 0;
 
-
     List<CartaFianza> listaResultado = admCartaFianza.buscarCartaFianza(codCartaFianza, strProveedor);
     if (listaResultado != null) {
       filaResultado = listaResultado.size();

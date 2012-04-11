@@ -26,7 +26,7 @@ public class LoginTest {
   }
 
   @Test
-  public void testIncorectoIsUsuarioValido() {
+  public void testIncorectoUsuarioNoValido() {
 
     String Usuario = "Usuario1";
     String Clave = "123458.";
@@ -41,7 +41,7 @@ public class LoginTest {
   }
 
   @Test
-  public void testVacioIsUsuario() {
+  public void ValidarDatosDeUsuarioQueNoEstenVacios() {
 
     String Usuario = "";
     String Clave = "";
