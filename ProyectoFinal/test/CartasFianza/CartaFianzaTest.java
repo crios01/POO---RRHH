@@ -10,7 +10,7 @@ public class CartaFianzaTest {
   }
 
   @Test
-  public void buscarCartaFianzaExistente() {
+  public void buscarSiCartaFianzaExiste() {
     System.out.println("Validamos la busqueda de Carta Fianza existente"); // imprime mensaje
     String codCartaFianza = "CF-001";
     String strProveedor = "";
@@ -23,11 +23,8 @@ public class CartaFianzaTest {
     List<CartaFianza> listaResultado = admCartaFianza.buscarCartaFianza(codCartaFianza, strProveedor);
     if (listaResultado != null) {
       filaResultado = listaResultado.size();
-
     }
-
     assertEquals(expResult, filaResultado);
-
   }
 
   @Test
@@ -45,11 +42,8 @@ public class CartaFianzaTest {
     List<CartaFianza> listaResultado = admCartaFianza.buscarCartaFianza(codCartaFianza, strProveedor);
     if (listaResultado != null) {
       filaResultado = listaResultado.size();
-
     }
-
     assertEquals(expResult, filaResultado);
-
   }
 
   @Test
@@ -66,10 +60,8 @@ public class CartaFianzaTest {
     List<CartaFianza> listaResultado = admCartaFianza.buscarCartaFianza(codCartaFianza, strProveedor);
     if (listaResultado != null) {
       filaResultado = listaResultado.size();
-
     }
     assertEquals(expResult, filaResultado);
-
   }
 
   @Test
@@ -86,7 +78,6 @@ public class CartaFianzaTest {
     List<CartaFianza> listaResultado = admCartaFianza.buscarCartaFianza(codCartaFianza, strProveedor);
     if (listaResultado != null) {
       filaResultado = listaResultado.size();
-
     }
     assertEquals(expResult, filaResultado);
   }
