@@ -1,7 +1,6 @@
 package Seguridad;
 
 import org.junit.Test;
-//import Modelos.Usuario; // Quitado por estar demás //
 import static org.junit.Assert.*;
 
 public class UsuarioTest {
